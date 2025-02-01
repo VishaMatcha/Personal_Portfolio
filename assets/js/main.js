@@ -40,16 +40,44 @@ ScrollReveal().reveal(".home__data, .about__img, .skills__box, .work__img, .cont
 });
 
 /*===== CONTACT FORM SUBMISSION USING EMAILJS =====*/
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("Rc8aCulxzBQkORIIZ"); // Your Public Key
 
-    emailjs.sendForm("service_id", "template_id", this)
-        .then(() => {
-            alert("Message Sent Successfully!");
-            this.reset();
-        }, (error) => {
-            alert("Failed to send message. Please try again.");
-            console.error("EmailJS Error:", error);
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        emailjs.sendForm("service_7fhg4t7", "template_rcw3jjz", this)
+            .then(() => {
+                alert("Message Sent Successfully!");
+                this.reset();
+            }, (error) => {
+                alert("Failed to send message. Please try again.");
+                console.error("EmailJS Error:", error);
+            });
+    });
+});
+
+/*===== WORK SECTION - SHOW HIDDEN CARDS =====*/
+document.addEventListener("DOMContentLoaded", function () {
+    const workButtons = document.querySelectorAll(".work-btn"); // Select all buttons
+    const workCards = document.querySelectorAll(".work__card"); // Select all hidden cards
+
+    workButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor action
+
+            let targetId = this.getAttribute("data-target"); // Get target card ID
+
+            // Hide all cards first
+            workCards.forEach(card => {
+                card.style.display = "none";
+            });
+
+            // Show all cards that match the clicked category
+            document.querySelectorAll(`.work__card[data-category="${targetId}"]`).forEach(card => {
+                card.style.display = "block";
+            });
         });
+    });
 });
 
