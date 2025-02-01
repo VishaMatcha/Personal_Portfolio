@@ -60,24 +60,31 @@ document.addEventListener("DOMContentLoaded", function () {
 /*===== WORK SECTION - SHOW HIDDEN CARDS =====*/
 document.addEventListener("DOMContentLoaded", function () {
     const workButtons = document.querySelectorAll(".work-btn"); // Select all buttons
-    const workCards = document.querySelectorAll(".work__card"); // Select all hidden cards
+    const workCardsContainer = document.querySelector(".work__cards"); // Container for all work cards
 
     workButtons.forEach(button => {
         button.addEventListener("click", function (event) {
             event.preventDefault(); // Prevent default anchor action
 
-            let targetId = this.getAttribute("data-target"); // Get target card ID
+            let targetId = this.getAttribute("data-target"); // Get target category
+
+            // Find all cards related to the clicked category
+            const targetCards = document.querySelectorAll(`.work__card[data-category="${targetId}"]`);
+
+            // Check if at least one target card is currently visible
+            let isVisible = Array.from(targetCards).some(card => card.style.display === "block");
 
             // Hide all cards first
-            workCards.forEach(card => {
+            document.querySelectorAll(".work__card").forEach(card => {
                 card.style.display = "none";
             });
 
-            // Show all cards that match the clicked category
-            document.querySelectorAll(`.work__card[data-category="${targetId}"]`).forEach(card => {
-                card.style.display = "block";
-            });
+            // If the cards were already visible, hide them
+            if (!isVisible) {
+                targetCards.forEach(card => {
+                    card.style.display = "block";
+                });
+            }
         });
     });
 });
-
