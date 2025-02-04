@@ -306,6 +306,37 @@ img {
 .skills__img {
   border-radius: 0.5rem;
 }
+.skills__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+.skills-btn {
+  padding: 8px 12px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.skills-btn:hover {
+  background: #4f5050;
+}
+.skills__cards {
+  margin-top: 20px;
+}
+.skills__card {
+  display: none;
+  padding: 15px;
+  background: #3d3e3e;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
 
 /* ===== WORK =====*/
 .work__container {

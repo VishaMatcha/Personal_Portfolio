@@ -82,66 +82,85 @@
 
             
 
-            <!--===== SKILLS =====-->
+            <!--===== SKILLS =====-->   
             <section class="skills section" id="skills">
                 <h2 class="section-title">Skills</h2>
 
-                <div class="skills__container bd-grid">          
+                <div class="skills__container bd-grid">
                     <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
+                        <h2 class="skills__subtitle">Professional Skills</h2>
+                        <p class="skills__text">Click on each category to view the specific skills.</p>
+                        
+                        <!-- Skills Buttons -->
+                        <div class="skills__buttons">
+                            <button class="skills-btn" data-target="web-tech">Web Technologies</button>
+                            <button class="skills-btn" data-target="ide">IDE</button>
+                            <button class="skills-btn" data-target="languages">Languages</button>
+                            <button class="skills-btn" data-target="frameworks">Frameworks & Libraries</button>
+                            <button class="skills-btn" data-target="databases">Database Technologies</button>
+                            <button class="skills-btn" data-target="cloud">Cloud Platforms</button>
+                            <button class="skills-btn" data-target="version-control">Version Control</button>
+                            <button class="skills-btn" data-target="testing">Testing Frameworks</button>
+                            <button class="skills-btn" data-target="deployment">Build & Deployment</button>
+                            <button class="skills-btn" data-target="os">Operating Systems</button>
                         </div>
                     </div>
                     
-                    <div>              
+                    <div>
                         <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+
+                <!-- Hidden Skill Cards -->
+                <div class="skills__cards">
+                    <div class="skills__card" data-category="web-tech">
+                        <h3>Web Technologies</h3>
+                        <p>HTML5, CSS3, JavaScript, JSON, XML, AJAX, REST, SOAP, FastAPI</p>
+                    </div>
+
+                    <div class="skills__card" data-category="ide">
+                        <h3>IDE</h3>
+                        <p>PyCharm, Visual Studio Code, Jupyter Notebook, Anaconda, Pip, Virtualenv</p>
+                    </div>
+
+                    <div class="skills__card" data-category="languages">
+                        <h3>Languages</h3>
+                        <p>Python, SQL, C++, JavaScript, Java</p>
+                    </div>
+
+                    <div class="skills__card" data-category="frameworks">
+                        <h3>Frameworks & Libraries</h3>
+                        <p>Django, Flask, Pandas, NumPy, Matplotlib, scikit-learn, TensorFlow, PyTorch, Lightning, Visualforce</p>
+                    </div>
+
+                    <div class="skills__card" data-category="databases">
+                        <h3>Database Technologies</h3>
+                        <p>PostgreSQL, MySQL, MongoDB, SQLite, ERP</p>
+                    </div>
+
+                    <div class="skills__card" data-category="cloud">
+                        <h3>Cloud Platforms</h3>
+                        <p>Microsoft Azure, AWS (EC2, S3, Lambda)</p>
+                    </div>
+
+                    <div class="skills__card" data-category="version-control">
+                        <h3>Version Control</h3>
+                        <p>Git, GitHub</p>
+                    </div>
+
+                    <div class="skills__card" data-category="testing">
+                        <h3>Testing Frameworks</h3>
+                        <p>Pytest, Unittest</p>
+                    </div>
+
+                    <div class="skills__card" data-category="deployment">
+                        <h3>Build & Deployment</h3>
+                        <p>Jenkins, Azure Pipelines, Docker, Kubernetes</p>
+                    </div>
+
+                    <div class="skills__card" data-category="os">
+                        <h3>Operating Systems</h3>
+                        <p>Windows, Linux, macOS</p>
                     </div>
                 </div>
             </section>
