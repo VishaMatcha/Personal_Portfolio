@@ -338,7 +338,7 @@ img {
   text-align: center; /* Centers the content inside */
 }
 .skills__card ul {
-  list-style-type: disc; /* Use bullets for the list */
+  list-style-type: None; /* Use bullets for the list */
   padding-left: 20px; /* Indent the list */
   margin: 0;
 }
