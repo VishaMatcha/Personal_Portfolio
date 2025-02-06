@@ -26,14 +26,44 @@
   --z-back: -10;
   --z-fixed: 100;
 }
-@media screen and (min-width: 968px) {
+/* Default font sizes (for desktops/laptops) */
+:root {
+  --big-font-size: 3.5rem;
+  --h2-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --smaller-font-size: .875rem;
+}
+
+/* For tablets (between 768px - 968px) */
+@media screen and (max-width: 968px) {
   :root {
-    --big-font-size: 3.5rem;
-    --h2-font-size: 2rem;
-    --normal-font-size: 1rem;
-    --smaller-font-size: .875rem;
+      --big-font-size: 3rem;
+      --h2-font-size: 1.75rem;
+      --normal-font-size: 0.9375rem;
+      --smaller-font-size: 0.8125rem;
   }
 }
+
+/* For mobile devices (below 768px) */
+@media screen and (max-width: 768px) {
+  :root {
+      --big-font-size: 2.5rem;
+      --h2-font-size: 1.5rem;
+      --normal-font-size: 0.875rem;
+      --smaller-font-size: 0.75rem;
+  }
+}
+
+/* For very small devices (below 480px) */
+@media screen and (max-width: 480px) {
+  :root {
+      --big-font-size: 2rem;
+      --h2-font-size: 1.25rem;
+      --normal-font-size: 0.8125rem;
+      --smaller-font-size: 0.6875rem;
+  }
+}
+
 
 /*===== BASE =====*/
 *, ::before, ::after {
