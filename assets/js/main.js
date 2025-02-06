@@ -95,14 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
     skillsButtons.forEach(button => {
         button.addEventListener("click", function () {
             let target = this.getAttribute("data-target");
-            const targetCard = document.querySelector(`.skills__card[data-category="${target}"]`);
+            const targetCard = document.querySelectorAll(`.skills__card[data-category="${target}"]`);
 
-            // Hide all skill cards
+            let isVisible = Array.from(targetCard).some(card => card.style.display === "block")
+
             document.querySelectorAll(".skills__card").forEach(card => (card.style.display = "none"));
 
-            // Show selected skill card
-            if (targetCard) {
-                targetCard.style.display = "block";
+            if(!isVisible){
+                targetCard.forEach(card => (card.style.display = "block"));
             }
         });
     });
