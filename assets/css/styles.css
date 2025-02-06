@@ -322,7 +322,7 @@ img {
   font-size: 14px;
 }
 .skills-btn:hover {
-  background: #4f5050;
+  background: #9ea0a0;
 }
 .skills__cards {
   margin-top: 20px;
@@ -330,12 +330,31 @@ img {
 .skills__card {
   display: none;
   padding: 15px;
-  background: #3d3e3e;
+  background: #a5a5a5;
   border-radius: 5px;
-  margin-top: 10px;
+  margin: 10px auto; /* Centers the card horizontally */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Restricts the card's width */
+  text-align: center; /* Centers the content inside */
+}
+.skills__card ul {
+  list-style-type: disc; /* Use bullets for the list */
+  padding-left: 20px; /* Indent the list */
+  margin: 0;
 }
 
+.skills__card li {
+  margin-bottom: 5px; /* Add spacing between items */
+  font-size: 1rem; /* Adjust font size */
+  color: #333; /* Text color */
+}
+.skills__card {
+  display: none; /* Initially hide all cards */
+}
+
+.skills__card.active { /* Style for the active card (optional) */
+  /* Add styles here, e.g., border, background color, etc. */
+}
 
 
 /* ===== WORK =====*/
